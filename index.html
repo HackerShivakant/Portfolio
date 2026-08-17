@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiva Kant :: root@security-portfolio</title>
+  <meta name="description"
+    content="Shiva Kant — Ethical Hacker & Full-Stack Developer. Cybersecurity enthusiast, bug hunter, and web builder from Lucknow, India.">
+
+  <!-- ============================================================
+     FONTS + ICONS (external, no local build step needed)
+     ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=VT323&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/CSS/style.css">
+
+  <!-- Favicon (inline terminal glyph, no extra file needed) -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23060a09'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%2339ff88' font-family='monospace'%3E%3E_%3C/text%3E%3C/svg%3E">
+
+</head>
+
+<body>
+
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+     MODULE: NAVBAR
+     ============================================================ -->
+  <header class="navbar">
+    <div class="wrap nav-inner">
+      <a href="#home" class="brand">
+        <span class="caret">&gt;_</span>
+        <span class="brand-name">Shiva <span>Kant</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home"></span>Whoami</a></li>
+          <li><a href="#about"></span>About</a></li>
+          <li><a href="#skills"></span>Skills</a></li>
+          <li><a href="#projects"></span>Projects</a></li>
+          <li><a href="#certifications"></span>Certs</a></li>
+          <li><a href="#labs"></span>Ctf-Labs</a></li>
+          <li><a href="#contact"></span>Contact</a></li>
+          <!-- <li><a href="#contact"><span class="num">07</span>Contact</a></li> -->
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <span class="status-pill"><span class="status-dot"></span>OPEN TO WORK</span>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+     MODULE: HERO
+     ============================================================ -->
+  <section class="hero" id="home">
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+    <div class="wrap hero-inner">
+      <div class="hero-grid">
+
+        <div>
+          <p class="hero-kicker"><span class="blink">●</span> SYSTEM STATUS: ONLINE</p>
+          <h1>Hi, I'm <span class="accent">Shiva Kant</span><br>I break things to build safer ones.</h1>
+          <p class="hero-role">&gt; <span id="hero-typed"></span><span class="cursor blink">▌</span></p>
+          <p class="hero-desc">BCA graduate from University of Lucknow, ethical hacking &amp; cybersecurity enthusiast,
+            and front-to-backend web builder. I hunt bugs, harden systems, and ship clean web projects — currently based
+            in Lucknow, India.</p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+            <a href="assets/resume/Shiva_Kant_Resume.pdf" target="_blank" rel="noopener" class="btn"><i
+                class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+            <a href="#certifications" class="btn"><i class="fa-solid fa-certificate"></i> See Certificates</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hstat"><b>10+</b><span>Certifications</span></div>
+            <div class="hstat"><b>6</b><span>Projects Built</span></div>
+            <div class="hstat"><b>4</b><span>CTF / Bounty Platforms</span></div>
+            <div class="hstat"><b>2026</b><span>BCA Graduate</span></div>
+          </div>
+
+          <div class="hero-social">
+            <a class="social-btn" href="https://github.com/HackerShivakant" target="_blank" rel="noopener"
+              aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a class="social-btn" href="https://www.instagram.com/ridehack100?igsh=M3RkbzVnNzhqM3Fi" target="_blank"
+              rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-btn" href="https://youtube.com/@ridehack100?si=Tf306S9EQXWJ1Wmk" target="_blank"
+              rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a class="social-btn" href="https://x.com/ridehack100" target="_blank" rel="noopener"
+              aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="social-btn" href="https://tryhackme.com/p/Ridehack100" target="_blank" rel="noopener"
+              aria-label="TryHackMe"><i class="fa-solid fa-user-secret"></i></a>
+            <a class="social-btn" href="https://profile.hackthebox.com/profile/019e8bda-1354-72fe-911e-ba2a18befc10"
+              target="_blank" rel="noopener" aria-label="Hack The Box"><i class="fa-solid fa-cube"></i></a>
+          </div>
+        </div>
+
+        <div class="term boot-term reveal">
+          <div class="term-bar">
+            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+            <span class="term-title">shivakant@security:~/portfolio</span>
+          </div>
+          <div class="boot-body" id="boot-body">
+            <!-- populated by JS boot sequence -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     MODULE: ABOUT
+     ============================================================ -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <p class="eyebrow">whoami</p>
+      <h2 class="section-title">About Me</h2>
+      <p class="section-sub">A quick system report on who's behind the keyboard.</p>
+
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p class="lead">I'm <span class="kw">Shiva Kant</span>, a BCA graduate (University of Lucknow, 2026) with a
+            growing specialization in <span class="kw">ethical hacking and cybersecurity</span>, alongside solid
+            front-to-backend web development skills.</p>
+          <p>My interest started with <span class="kw">bug hunting</span> — finding what breaks, and why — which pulled
+            me into networking, Linux internals, firewalls, and digital forensics. I've since built a practical
+            foundation in <span class="kw">Kali Linux</span> and <span class="kw">Parrot OS</span>, and I actively
+            practice on platforms like TryHackMe, Hack The Box, Hackviser, and Bugcrowd.</p>
+          <p>On the development side, I work with <span class="kw">Python</span>, <span class="kw">Core Java</span>, and
+            the <span class="kw">HTML / CSS / JavaScript / Bootstrap</span> stack — completing structured industrial
+            training in both Web Dev in Python and Core Java web design, including a full team-built project.</p>
+          <p>I'm self-motivated, detail-focused, and comfortable working independently or inside a team — currently open
+            to internships and entry-level opportunities in cybersecurity or web development.</p>
+
+          <div class="about-badges">
+            <span class="tag live"><i class="fa-solid fa-shield-halved"></i> Cybersecurity</span>
+            <span class="tag live"><i class="fa-solid fa-bug"></i> Bug Hunting</span>
+            <span class="tag training"><i class="fa-solid fa-code"></i> Web Development</span>
+            <span class="tag"><i class="fa-brands fa-linux"></i> Kali &amp; Parrot OS</span>
+          </div>
+        </div>
+
+        <div class="term fetch reveal">
+          <div class="fetch-head">
+            <div class="fetch-avatar">SK</div>
+            <div>
+              <div style="font-weight:700; font-size:15px;">shivakant@lucknow</div>
+              <div style="color:var(--text-faint); font-size:11.5px;">-----------------------</div>
+            </div>
+          </div>
+          <div class="fetch-row"><span class="fetch-key">OS</span><span class="fetch-val">Human 1.0
+              (Kali-flavoured)</span></div>
+          <div class="fetch-row"><span class="fetch-key">Education</span><span class="fetch-val">BCA, University of
+              Lucknow — 2026</span></div>
+          <div class="fetch-row"><span class="fetch-key">Institute</span><span class="fetch-val">Goel Institute of
+              Higher Studies</span></div>
+          <div class="fetch-row"><span class="fetch-key">Focus</span><span class="fetch-val">Cybersecurity · Ethical
+              Hacking</span></div>
+          <div class="fetch-row"><span class="fetch-key">Stack</span><span class="fetch-val">Python, Java, JS,
+              Bootstrap</span></div>
+          <div class="fetch-row"><span class="fetch-key">Shell</span><span class="fetch-val">bash / zsh</span></div>
+          <div class="fetch-row"><span class="fetch-key">Location</span><span class="fetch-val">Lucknow, India</span>
+          </div>
+          <div class="fetch-row"><span class="fetch-key">Status</span><span class="fetch-val"
+              style="color:var(--green);">Open to work ●</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     MODULE: SKILLS
+     ============================================================ -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <p class="eyebrow">skills --list</p>
+      <h2 class="section-title">Skill Set</h2>
+      <p class="section-sub">Security know-how on one side, build know-how on the other.</p>
+
+      <div class="skill-cols">
+        <div class="term skill-card reveal">
+          <h3><i class="fa-solid fa-shield-halved"></i> Security &amp; Hacking</h3>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Bug Hunting</span><span class="pct">75%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Networking &amp; Firewalls</span><span class="pct">70%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Ethical Hacking</span><span class="pct">68%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="68"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Cyber Forensics</span><span class="pct">60%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="60"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="term skill-card reveal">
+          <h3><i class="fa-solid fa-code"></i> Development</h3>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>HTML / CSS / JS</span><span class="pct">85%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Bootstrap</span><span class="pct">78%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="78"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Python</span><span class="pct">75%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Core Java</span><span class="pct">65%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="65"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="term skill-card reveal">
+          <h3><i class="fa-solid fa-terminal"></i> Systems &amp; Tools</h3>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Linux (Kali)</span><span class="pct">75%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Parrot OS</span><span class="pct">70%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Git &amp; GitHub Pages</span><span class="pct">70%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-top"><span>Cyber Threat Analysis</span><span class="pct">62%</span></div>
+            <div class="meter">
+              <div class="meter-fill" data-w="62"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-chips">
+        <span class="tool-chip"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="tool-chip"><i class="fa-brands fa-java"></i> Java</span>
+        <span class="tool-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+        <span class="tool-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+        <span class="tool-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <span class="tool-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+        <span class="tool-chip"><i class="fa-brands fa-linux"></i> Kali Linux</span>
+        <span class="tool-chip"><i class="fa-solid fa-dove"></i> Parrot OS</span>
+        <span class="tool-chip"><i class="fa-solid fa-network-wired"></i> Networking</span>
+        <span class="tool-chip"><i class="fa-solid fa-fire"></i> Firewalls</span>
+        <span class="tool-chip"><i class="fa-solid fa-magnifying-glass"></i> Cyber Forensics</span>
+        <span class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     MODULE: PROJECTS
+     ============================================================ -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <p class="eyebrow">ls ~/projects</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">A mix of live builds, training work, and security tools in progress.</p>
+
+      <div class="proj-grid">
+
+        <!-- Project 1 -->
+        <article class="term proj-card reveal">
+          <div class="term-bar">
+            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+            <span class="term-title">awas-construction</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <h3 class="proj-title">AWAS Construction</h3>
+              <span class="tag live">LIVE</span>
+            </div>
+            <p class="proj-desc">A responsive business website for a construction company — service listings, project
+              showcase, and a contact section, built with a clean, mobile-first layout.</p>
+            <div class="proj-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="proj-links">
+              <a href="https://hackershivakant.github.io/AWASConstruction/" target="_blank" rel="noopener"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="term proj-card reveal">
+          <div class="term-bar">
+            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+            <span class="term-title">plotting-tool</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <h3 class="proj-title">Plotting — Data Visualizer</h3>
+              <span class="tag live">LIVE</span>
+            </div>
+            <p class="proj-desc">A lightweight browser-based tool for plotting and visualizing data points and
+              functions, focused on a fast, no-clutter interface.</p>
+            <div class="proj-stack"><span>JavaScript</span><span>HTML5 Canvas</span><span>CSS</span></div>
+            <div class="proj-links">
+              <a href="https://hackershivakant.github.io/Ploting/" target="_blank" rel="noopener"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="term proj-card reveal">
+          <div class="term-bar">
+            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+            <span class="term-title">tik-tok-tuk-game</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <h3 class="proj-title">Tik Tok-Tuk Game</h3>
+              <!-- <span class="tag training">TRAINING PROJECT</span> -->
+              <span class="tag progress">IN PROGRESS</span>
+            </div>
+            <p class="proj-desc">A web page game built with the Web Designing team during Industrial Training at
+              IgniteSoftLabs, Lucknow, using Core Java technology in a collaborative environment.</p>
+            <div class="proj-stack"><span>Core Java</span><span>Web Design</span><span>Team Project</span></div>
+            <div class="proj-links">
+              <span style="color:var(--text-faint); font-size:12px;"><i class="fa-solid fa-building"></i>
+                IgniteSoftLabs, 2024</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="term proj-card reveal">
+          <div class="term-bar">
+            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+            <span class="term-title">hashcrafter</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <h3 class="proj-title">HashCrafter</h3>
+              <span class="tag live">LIVE</span>
+            </div>
+            <p class="proj-desc">A web-based hash generation and verification tool — built and deployed as a hands-on
+              project exploring hashing and cryptographic utilities.</p>
+            <div class="proj-stack"><span>Python</span><span>Web App</span><span>Security</span></div>
+            <div class="proj-links">
+              <a href="https://hashcrafter.onrender.com" target="_blank" rel="noopener"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="term proj-card reveal">
+          <div class="term-bar">
+            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+            <span class="term-title">manasvi-ayurvedic-store</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <h3 class="proj-title">Manasvi Ayurvedic Store</h3>
+              <span class="tag live">LIVE</span>
+            </div>
+            <p class="proj-desc">A business website for an Ayurvedic &amp; Homeopathic store — product listings,
+              treatment info, and doctor consultation booking, built with a clean multi-section layout.</p>
+            <div class="proj-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="proj-links">
+              <a href="https://hackershivakant.github.io/Manasiv/" target="_blank" rel="noopener"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     MODULE: CERTIFICATIONS
+     ============================================================ -->
+  <section class="section" id="certifications">
+    <div class="wrap">
+      <p class="eyebrow">ls -la ~/certificates</p>
+      <h2 class="section-title">Certifications</h2>
+      <p class="section-sub">Completed courses and training programs in cybersecurity and development.</p>
+
+      <div class="term cert-panel reveal">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-title">~/certificates — 10 files</span>
+        </div>
+
+        <div class="cert-list" id="certList">
+          <!-- rows injected by JS from certData, first 6 shown, rest revealed in modal -->
+        </div>
+
+        <div class="cert-foot">
+          <span class="cert-count"><b>10</b> certificates on file — click any row, or view the full archive.</span>
+          <button class="btn btn-primary" id="openCertModal"><i class="fa-solid fa-folder-open"></i> See All
+            Certificates</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate modal (gallery) -->
+  <div class="modal-backdrop" id="certModal" role="dialog" aria-modal="true" aria-label="All certificates">
+    <div class="modal-box term">
+      <div class="modal-head">
+        <h3><i class="fa-solid fa-folder-open"></i>&nbsp; /home/shivakant/certificates — 10 items</h3>
+        <button class="modal-close" id="closeCertModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-grid" id="certGrid">
+        <!-- injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox for enlarged certificate image -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image"><i
+        class="fa-solid fa-xmark"></i></button>
+    <img id="lightboxImg" src="" alt="Certificate preview">
+  </div>
+
+  <!-- ============================================================
+     MODULE: HACKING LABS / CTF PROFILES
+     ============================================================ -->
+  <section class="section" id="labs">
+    <div class="wrap">
+      <p class="eyebrow">connect --labs</p>
+      <h2 class="section-title">Hacking Labs &amp; Bounty Platforms</h2>
+      <p class="section-sub">Where I practice, compete, and hunt.</p>
+
+      <div class="lab-grid">
+        <a href="https://tryhackme.com/p/Ridehack100" target="_blank" rel="noopener" class="term lab-card reveal">
+          <div class="lab-icon"><i class="fa-solid fa-user-secret"></i></div>
+          <h4>TryHackMe</h4>
+          <div class="uname">@Ridehack100</div>
+          <span class="tag live">View Profile</span>
+        </a>
+
+        <a href="https://profile.hackthebox.com/profile/019e8bda-1354-72fe-911e-ba2a18befc10" target="_blank"
+          rel="noopener" class="term lab-card reveal">
+          <div class="lab-icon"><i class="fa-solid fa-cube"></i></div>
+          <h4>Hack The Box</h4>
+          <div class="uname">Profile</div>
+          <span class="tag live">View Profile</span>
+        </a>
+
+        <div class="term lab-card reveal">
+          <div class="lab-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h4>Hackviser</h4>
+          <div class="uname">@ridehack100</div>
+          <span class="tag training">Username Only</span>
+        </div>
+
+        <div class="term lab-card reveal">
+          <div class="lab-icon"><i class="fa-solid fa-bug-slash"></i></div>
+          <h4>Bugcrowd</h4>
+          <div class="uname">@ridehack100</div>
+          <span class="tag training">Username Only</span>
+        </div>
+
+        <div class="term lab-card reveal">
+          <div class="lab-icon"><i class="fa-brands fa-hackerrank"></i></div>
+          <h4>HackerOne</h4>
+          <div class="uname">@ridehack100</div>
+          <span class="tag training">Username Only</span>
+        </div>
+
+        <div class="term lab-card reveal">
+          <div class="lab-icon"><i class="fa-solid fa-spider"></i></div>
+          <h4>PortSwigger</h4>
+          <div class="uname">@ridehack100</div>
+          <span class="tag training">Username Only</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     MODULE: CONTACT
+     ============================================================ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">contact --init</p>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Open to internships, entry-level security or web dev roles, and collaboration.</p>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div><b>Email</b><a href="mailto:shivashiva80041@gmail.com">shivashiva80041@gmail.com</a></div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><b>Phone</b><a href="tel:+918004110977">+91 80041 10977</a></div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><b>Location</b><span>Lucknow, Uttar Pradesh, India</span></div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-share-nodes"></i>
+            <div>
+              <b>Social</b>
+              <div class="hero-social" style="margin-top:6px;">
+                <a class="social-btn" href="https://github.com/HackerShivakant" target="_blank" rel="noopener"
+                  aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a class="social-btn" href="https://www.instagram.com/ridehack100?igsh=M3RkbzVnNzhqM3Fi" target="_blank"
+                  rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a class="social-btn" href="https://youtube.com/@ridehack100?si=Tf306S9EQXWJ1Wmk" target="_blank"
+                  rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a class="social-btn" href="https://x.com/ridehack100" target="_blank" rel="noopener" aria-label="X"><i
+                    class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="term form-panel reveal" action="https://api.web3forms.com/submit" method="POST">
+          <div class="form-row">
+            <label for="cname">name</label>
+            <input type="hidden" name="access_key" value="aff4a071-a2ae-4e2f-9623-2e2112ab6b0c">
+            <input type="text" id="cname" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="cemail">email</label>
+            <input type="email" id="cemail" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="cmsg">message</label>
+            <textarea id="cmsg" name="message" placeholder="Type your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Send
+            Message</button>
+          <p class="form-note">Opens your email client to send directly to shivashiva80041@gmail.com</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     MODULE: FOOTER
+     ============================================================ -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <b>shivakant@security</b>:~$ echo "thanks for stopping by" &nbsp;·&nbsp; © <span id="year"></span> Shiva Kant
+      </div>
+      <div class="footer-social">
+        <a class="social-btn" href="https://github.com/HackerShivakant" target="_blank" rel="noopener"
+          aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a class="social-btn" href="https://www.instagram.com/ridehack100?igsh=M3RkbzVnNzhqM3Fi" target="_blank"
+          rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a class="social-btn" href="https://youtube.com/@ridehack100?si=Tf306S9EQXWJ1Wmk" target="_blank" rel="noopener"
+          aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a class="social-btn" href="https://x.com/ridehack100" target="_blank" rel="noopener" aria-label="X"><i
+            class="fa-brands fa-x-twitter"></i></a>
+        <a class="social-btn" href="mailto:shivashiva80041@gmail.com" aria-label="Email"><i
+            class="fa-solid fa-envelope"></i></a>
+      </div>
+      <a href="#home" class="back-top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
+    </div>
+  </footer>
+  
+  <script src="./assets/JS/javascript.js"></script>
+</body>
+
+</html>
